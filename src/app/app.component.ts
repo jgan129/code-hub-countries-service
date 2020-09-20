@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CustomerService } from './customer.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +7,12 @@ import { CustomerService } from './customer.service';
 })
 export class AppComponent {
   title = 'code-hub-problem-solution';
-  countries: any[];
+  // countries: any[];
 
-  constructor(private CustomerService: CustomerService) {
-    CustomerService.getCountries().subscribe((data: any[]) => {
-      this.countries = data;
-      console.log(this.countries);
-    });;
-  }
+  // constructor(private CustomerService: CustomerService) {
+  //   CustomerService.getCountries().subscribe((data: any[]) => {
+  //     this.countries = data;
+  //     console.log(this.countries);
+  //   });;
+  // }
 }

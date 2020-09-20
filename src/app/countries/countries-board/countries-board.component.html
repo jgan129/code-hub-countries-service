@@ -1,0 +1,18 @@
+<div class="card-group">
+    <div class="card" *ngFor="let country of countries" style="min-width: 200px">
+        <img src="{{ country.flag }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ country.name }}</h5>
+            <p class="card-text">
+                <i>
+                    Capital: {{ country.capital }}
+                    <br/>
+                    Region: {{ country.region }}    
+                </i>
+            </p>
+        </div>
+        <div class="card-footer d-flex justify-content-center">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/{{ country.name }}" class="btn btn-primary">Country Details</a>
+        </div>
+    </div>
+</div>

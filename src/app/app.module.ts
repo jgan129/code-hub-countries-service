@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { StructuralDirectivesModule } from './structural-directives/structural-directives.module';
-import { HttpClientModule } from '@angular/common/http';
+import { CountriesModule } from './countries/countries.module';
+import { CountriesBoardComponent } from './countries/countries-board/countries-board.component';
 
 @NgModule({
   declarations: [
@@ -11,9 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    CountriesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

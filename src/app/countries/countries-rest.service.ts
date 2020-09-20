@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Country } from './model/country.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
+export class CountriesRestService {
 
-  countries: any;
+  countries: Country[];
 
   private readonly endpoint = 'https://restcountries.eu/rest/v2';
 
@@ -15,7 +16,8 @@ export class CustomerService {
     private http: HttpClient
   ) { }
 
-  getCountries() : Observable<any> {
-    return this.http.get<any>(this.endpoint)
+  getCountries() : Observable<Country[]> {
+    return this.http.get<Country[]>(this.endpoint)
   }
+
 }
